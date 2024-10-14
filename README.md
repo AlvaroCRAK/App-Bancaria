@@ -18,7 +18,6 @@ Este proyecto es un sistema bancario avanzado que permite la gestión de usuario
 
 - **Notificaciones**: La aplicación envía notificaciones automáticas a los clientes sobre transacciones y otros eventos importantes. Los mensajes se almacenan y se pueden consultar en cualquier momento, lo cual mejora la comunicación y transparencia con los usuarios.
 
-- **Auditoría**: Se registra un historial detallado de todas las operaciones y cambios importantes en el sistema, lo que permite un monitoreo completo y asegura un alto nivel de seguridad y control sobre el sistema.
 
 ## Diagrama de la Base de Datos
 
