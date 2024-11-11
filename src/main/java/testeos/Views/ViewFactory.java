@@ -148,7 +148,7 @@ public class ViewFactory {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/icon.png"))));
-        stage.setResizable(true); // nota: cambiar a false, reajustar si es necesario
+        stage.setResizable(false); // nota: cambiar a true, reajustar si es necesario
         stage.setTitle("Aplicacion Bancaria");
         stage.show();
     }

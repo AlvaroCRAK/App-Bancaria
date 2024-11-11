@@ -2,6 +2,7 @@ package testeos.Controllers.Client;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import testeos.Models.Model;
 import testeos.Views.ClientMenuOptions;
 
@@ -25,6 +26,7 @@ public class ClientMenuController implements Initializable {
         dashboard_btn.setOnAction(event -> onDashboard());
         transaction_btn.setOnAction(event -> onTransactions());
         accounts_btn.setOnAction(event -> onAccounts());
+        logout_btn.setOnAction(event -> onLogout());
     }
 
     private void onDashboard() {
@@ -39,4 +41,14 @@ public class ClientMenuController implements Initializable {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.ACCOUNTS);
     }
 
+    private void onLogout(){
+        // Obtener el stage
+        Stage stage = (Stage) dashboard_btn.getScene().getWindow();
+        // Cerramos la ventana del cliente
+        Model.getInstance().getViewFactory().closeStage(stage);
+        // Mostrar la ventana del login
+        Model.getInstance().getViewFactory().showLoginWindow();
+        // Cambiar la SuccessLoginFlag a false
+        Model.getInstance().setClientLoginSuccessFlag(false);
+    }
 }

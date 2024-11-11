@@ -5,8 +5,6 @@ import javafx.scene.control.ListCell;
 import testeos.Controllers.Admin.ClientCellController;
 import testeos.Models.Client;
 
-import java.io.IOException;
-
 public class ClientCellFactory extends ListCell<Client> {
 
     @Override
@@ -16,7 +14,7 @@ public class ClientCellFactory extends ListCell<Client> {
             setText(null);
             setGraphic(null);
         } else {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/testeos/Admin/ClientCell.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/ClientCell.fxml"));
             ClientCellController controller = new ClientCellController(client);
             loader.setController(controller);
             setText(null);

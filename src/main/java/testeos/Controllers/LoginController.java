@@ -25,7 +25,7 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         acc_selector.setItems(FXCollections.observableArrayList(AccountType.CLIENT, AccountType.ADMIN));
         acc_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
-        acc_selector.valueProperty().addListener(observable -> Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue()));
+        acc_selector.valueProperty().addListener(observable -> setAcc_selector());
         login_btn.setOnAction(event -> onLogin());
     }
 
@@ -41,10 +41,30 @@ public class LoginController implements Initializable {
             } else {
                 payee_address_fld.setText("");
                 password_fld.setText("");
-                error_lbl.setText("No existen dichas credenciales");
+                error_lbl.setText("No existen dichas credenciales   ");
             }
         } else {
-            Model.getInstance().getViewFactory().showAdminWindow();
+            // Evalua las credenciales del admin
+            Model.getInstance().evaluateAdminCred(payee_address_fld.getText(), password_fld.getText());
+            if (Model.getInstance().getAdminLoginSuccessFlag()){
+                Model.getInstance().getViewFactory().showAdminWindow();
+                // Cierra la etapa de login
+                Model.getInstance().getViewFactory().closeStage(stage);
+            } else {
+                payee_address_fld.setText("");
+                password_fld.setText("");
+                error_lbl.setText("No existen dichas credenciales   ");
+            }
+        }
+    }
+
+    private void setAcc_selector() {
+        Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue());
+        // Cambiar el label acorde al tipo de usuario
+        if (acc_selector.getValue() == AccountType.ADMIN) {
+            payee_address_lbl.setText("Username:");
+        } else{
+            payee_address_lbl.setText("Payee Address:");
         }
     }
 }
