@@ -1,0 +1,16 @@
+.title-perfil {
+    -fx-font-size: 3em;
+}
+
+.profile-container Pane{
+    -fx-font-family: "Calibri Light";
+
+}
+
+.profile-container Pane Text {
+    -fx-font-size: 2.4em;
+}
+
+.profile-container Pane Label {
+    -fx-font-size: 2.4em;
+}
