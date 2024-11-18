@@ -1,18 +1,24 @@
 
 .create_client_container {
-    -fx-background-color: #EEEEEE;
+    -fx-background-color: #63898C;
 }
 
 .create_client_container Text {
     -fx-font-size: 1.2em;
-    -fx-fill: #888888;
+    -fx-fill: #000000;
 }
 
 .create_client_container VBox {
-    -fx-border-width: 0 0 0 1;
+    -fx-border-width: 1 1 1 1;
+    -fx-background-color: #A7D1D2;
     -fx-border-color: #000000;
-    -fx-padding: 10;
-    -fx-spacing: 15;
+    -fx-padding: 10 15;
+    -fx-spacing: 13;
+}
+
+.create_client_container VBox Text {
+    -fx-fill: BLACK;
+    -fx-font-size: 1.2em;
 }
 
 .create_client_container TextField {

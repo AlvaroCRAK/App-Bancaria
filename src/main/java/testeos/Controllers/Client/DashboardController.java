@@ -39,7 +39,7 @@ public class DashboardController implements Initializable {
     }
 
     private void bindData() {
-        user_name.textProperty().bind(Bindings.concat("Hi, ").concat(Model.getInstance().getClient().firstNameProperty()));
+        user_name.textProperty().bind(Bindings.concat("Hola, ").concat(Model.getInstance().getClient().firstNameProperty()));
         login_date.setText("Hoy, " + LocalDate.now());
         checking_bal.textProperty().bind(Model.getInstance().getClient().checkingAccountProperty().get().balanceProperty().asString());
         checking_acc_num.textProperty().bind(Model.getInstance().getClient().checkingAccountProperty().get().accountNumberProperty());

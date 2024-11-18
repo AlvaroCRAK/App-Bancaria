@@ -1,6 +1,18 @@
 
 .deposit_container {
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #63898C;
+}
+
+.deposit_container VBox {
+    -fx-background-color: #A7D1D2;
+}
+
+.deposit_container HBox {
+    -fx-background-color: #81BECE;
+}
+
+.deposit_container VBox VBox {
+    -fx-background-color: #E0F4F5;
 }
 
 .search_box {
@@ -11,8 +23,8 @@
 
 Text {
     -fx-font-family: "Calibri Light";
-    -fx-font-size: 1.6em;
-    -fx-fill: #555555;
+    -fx-font-size: 1.8em;
+    -fx-fill: #000000;
 }
 
 TextField {

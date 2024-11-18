@@ -42,6 +42,18 @@ public class DatabaseDriver {
         return resultSet;
     }
 
+    public ResultSet getPassword(String pAddress) {
+        Statement statement;
+        ResultSet resultSet = null;
+        try {
+            statement = this.conn.createStatement();
+            resultSet = statement.executeQuery("SELECT Password FROM Clients WHERE PayeeAddress='"+pAddress+"';");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
+
     // Metodo que el balance de la cuenta de ahorros
     public double getSavingsAccountBalance(String pAddress) {
         Statement statement;
@@ -116,6 +128,18 @@ public class DatabaseDriver {
             statement = this.conn.createStatement();
             statement.executeUpdate("INSERT INTO " + "Clients(FirstName, LastName, PayeeAddress, Password, Date)" +
                     "VALUES ( '"+fName+"', '"+lName+"', '"+pAddress+"', '"+password+"', '"+date.toString()+"');");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteClient(String pAddress){
+        Statement statement;
+        try {
+            statement = this.conn.createStatement();
+            statement.executeUpdate("DELETE FROM Clients WHERE PayeeAddress = '"+pAddress+"';");
+            statement.executeUpdate("DELETE FROM CheckingAccounts WHERE Owner = '"+pAddress+"';");
+            statement.executeUpdate("DELETE FROM SavingsAccounts WHERE Owner = '"+pAddress+"';");
         } catch (SQLException e) {
             e.printStackTrace();
         }

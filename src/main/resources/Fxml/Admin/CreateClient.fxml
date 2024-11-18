@@ -8,30 +8,26 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="create_client_container"
-            stylesheets="@../../Styles/CreateClient.css" xmlns="http://javafx.com/javafx/23"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="testeos.Controllers.Admin.CreateClientController">
-    <Text layoutX="36.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create New Client Account"
-          AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0"/>
-    <VBox fillWidth="false" layoutX="26.0" layoutY="44.0" prefHeight="700.0" prefWidth="600.0"
-          AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:"/>
-        <TextField fx:id="fName_fld"/>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:"/>
-        <TextField fx:id="lName_fld"/>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:"/>
-        <TextField fx:id="password_lbl"/>
-        <Text layoutX="10.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payee Address:"/>
-        <CheckBox fx:id="pAddress_box" mnemonicParsing="false"/>
-        <Label fx:id="pAddress_lbl" styleClass="payee_adress_lbl"/>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts:"/>
-        <CheckBox fx:id="ch_acc_box" mnemonicParsing="false" text="Add Checking Account"/>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account Balance:"/>
-        <TextField fx:id="ch_amount_fld"/>
-        <CheckBox fx:id="sv_acc_box" mnemonicParsing="false" text="Add Savings Account"/>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Account Balance:"/>
-        <TextField fx:id="sv_amount_fld"/>
-        <Button fx:id="create_client_btn" mnemonicParsing="false" text="Create New Client"/>
-        <Label fx:id="error_lbl" styleClass="error_lbl"/>
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="create_client_container" stylesheets="@../../Styles/CreateClient.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testeos.Controllers.Admin.CreateClientController">
+    <Text layoutX="36.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 2em;" text="Crear nueva cuenta para el Cliente:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="6.0" />
+    <VBox fillWidth="false" layoutX="26.0" layoutY="44.0" prefHeight="697.0" prefWidth="823.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombres:" />
+        <TextField fx:id="fName_fld" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos:" />
+        <TextField fx:id="lName_fld" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:" />
+        <TextField fx:id="password_lbl" />
+        <Text layoutX="10.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta de beneficiario:" />
+        <CheckBox fx:id="pAddress_box" mnemonicParsing="false" />
+        <Label fx:id="pAddress_lbl" styleClass="payee_adress_lbl" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cuentas:" />
+        <CheckBox fx:id="ch_acc_box" mnemonicParsing="false" text="Añadir cuenta de cheques" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo de la cuenta de cheques:" />
+        <TextField fx:id="ch_amount_fld" />
+        <CheckBox fx:id="sv_acc_box" mnemonicParsing="false" text="Añadir cuenta de ahorros" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo de la cuenta de ahorros:" />
+        <TextField fx:id="sv_amount_fld" />
+        <Button fx:id="create_client_btn" mnemonicParsing="false" text="Crear nuevo cliente" />
+        <Label fx:id="error_lbl" styleClass="error_lbl" />
     </VBox>
 </AnchorPane>

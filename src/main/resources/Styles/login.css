@@ -1,5 +1,9 @@
 .login_container {
     -fx-background-color: #EEEEEE;
+    -fx-background-image: url('../Images/login_bg.jpg');
+    -fx-background-size: auto 100%;
+    -fx-background-position: right center;
+    -fx-background-repeat: no-repeat;
 }
 
 /* Logo Container Styles */

@@ -1,15 +1,15 @@
-
 .accounts_view_container {
-    -fx-background-color: #EEEEEE;
+    -fx-background-color: #A7D1D2;
 }
 
 .accounts_view_container Text {
-    -fx-fill: #888888;
-    -fx-font-size: 1.4em;
+    -fx-fill: #000000;
+    -fx-font-size: 1.8em;
     -fx-font-family: "Calibri Light";
 }
 
 .accounts_view_container VBox {
+    -fx-background-color: #E0F4F5;
     -fx-border-width: 0 0 0 1;
     -fx-border-color: #888888;
     -fx-padding: 10;
@@ -17,7 +17,7 @@
 }
 
 .accounts_view_container VBox Text {
-    -fx-font-size: 1.2em;
+    -fx-font-size: 1.6em;
 }
 
 .accounts_view_container VBox Label {
